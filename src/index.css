@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-meme-green: #00FF00;
+  --color-meme-dark: #0A0A0A;
+  --color-meme-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-meme-dark text-meme-white font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold uppercase tracking-tighter;
+  }
+}
+
+@utility brutalist-border {
+  @apply border-4 border-meme-dark shadow-[8px_8px_0px_0px_rgba(0,0,0,1)];
+}
+
+@utility brutalist-card {
+  @apply bg-meme-white text-meme-dark brutalist-border p-6;
+}
+
+@utility brutalist-button {
+  @apply bg-meme-green text-meme-dark brutalist-border px-8 py-4 font-display font-bold uppercase transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+}
+
+@utility comic-text {
+  @apply relative inline-block;
+  text-shadow: 2px 2px 0px #000;
+}
